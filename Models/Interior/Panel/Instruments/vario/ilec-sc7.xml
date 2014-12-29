@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>ilec-sc7.ac</path>
+
+  <animation>
+    <object-name>face</object-name>
+    <object-name>mc-cready</object-name>
+    <object-name>sens-switch</object-name>
+    <object-name>mode-switch</object-name>
+    <object-name>vol-knob</object-name>
+    <object-name>audio-switch</object-name>
+    <object-name>Needle</object-name>
+    <object-name>sign-digit</object-name>
+    <object-name>units-digit</object-name>
+    <object-name>dot-digit</object-name>
+    <object-name>decimals-digit</object-name>
+
+    <object-name>incr-sens</object-name>
+    <object-name>decr-sens</object-name>
+    <object-name>incr-mode</object-name>
+    <object-name>decr-mode</object-name>
+    <object-name>incr-audio</object-name>
+    <object-name>decr-audio</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Sky-sportster/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>Needle</object-name>
+    <object-name>decimals-digit</object-name>
+    <object-name>units-digit</object-name>
+    <object-name>sign-digit</object-name>
+    <object-name>dot-digit</object-name>  
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+  
+  <!--needle-->
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle</object-name>
+    <property>/instrumentation/ilec-sc7/te-reading-mps</property>
+    <interpolation> 
+      <entry><ind> -5 </ind><dep> -119.7130 </dep></entry>
+      <entry><ind>  0 </ind><dep>    0.0000 </dep></entry>
+      <entry><ind>  5 </ind><dep>  119.7135 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00006 </x-m>
+      <y-m> -0.00581 </y-m>
+      <z-m>  0.00000 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+ 
+  <!-- mc cready -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mc-cready</object-name>
+    <property>/instrumentation/mc-cready/rot</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m>  0.00006 </x-m>
+      <y-m> -0.00581 </y-m>
+      <z-m>  0.00000 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>mc-cready</object-name>
+    <action>
+      <name>increase mc-cready</name>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/mc-cready/rot</property>
+        <step>  2 </step>
+        <min>   0 </min>
+        <max> 360 </max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>mc-cready</object-name>
+    <action>
+      <name>decrease mc-cready</name>
+      <button>1</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/mc-cready/rot</property>
+        <step> -2 </step>
+        <min>   0 </min>
+        <max> 360 </max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- volume -->
+  <animation>
+    <type>rotate</type>
+    <object-name>vol-knob</object-name>
+    <property>/instrumentation/ilec-sc7/volume</property>
+    <factor> 360 </factor>
+    <center>
+      <x-m> 0.00247 </x-m>
+      <y-m> 0.02239 </y-m>
+      <z-m> 0.00913 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>vol-knob</object-name>
+    <action>
+      <name>increase audio volume</name>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/ilec-sc7/volume</property>
+        <step> 0.05 </step>
+        <min>  0.00 </min>
+        <max>  1.00 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>vol-knob</object-name>
+    <action>
+      <name>decrease audio volume</name>
+      <button>1</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/ilec-sc7/volume</property>
+        <step> -0.05 </step>
+        <min>   0.00 </min>
+        <max>   1.00 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- audio switch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>audio-switch</object-name>
+    <property>instrumentation/ilec-sc7/audio</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -30 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0 </dep></entry>
+      <entry><ind> 2 </ind><dep>  30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.00081 </x-m>
+      <y-m> 0.00415 </y-m>
+      <z-m> 0.02573 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>incr-audio</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/ilec-sc7/audio</property>
+        <step> 1 </step>
+        <min>  0 </min>
+        <max>  2 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>decr-audio</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/ilec-sc7/audio</property>
+        <step> -1 </step>
+        <min>   0 </min>
+        <max>   2 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- mode switch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mode-switch</object-name>
+    <property>instrumentation/ilec-sc7/mode</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -30 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0 </dep></entry>
+      <entry><ind> 2 </ind><dep>  30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00081 </x-m>
+      <y-m>  0.02075 </y-m>
+      <z-m> -0.01079 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>incr-mode</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/ilec-sc7/mode</property>
+        <step> 1 </step>
+        <min>  0 </min>
+        <max>  2 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>decr-mode</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/ilec-sc7/mode</property>
+        <step> -1 </step>
+        <min>   0 </min>
+        <max>   2 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- sensitivity switch -->  
+  <animation>
+    <type>rotate</type>
+    <object-name>sens-switch</object-name>
+    <property>instrumentation/ilec-sc7/sensitivity</property>
+    <interpolation>
+      <entry><ind> 1 </ind><dep>  30 </dep></entry>
+      <entry><ind> 3 </ind><dep> -30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00081 </x-m>
+      <y-m>  0.00249 </y-m>
+      <z-m> -0.02573 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>decr-sens</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/ilec-sc7/sensitivity</property>
+        <step> 3 </step>
+        <min>  1 </min>
+        <max>  3 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>incr-sens</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/ilec-sc7/sensitivity</property>
+        <step> -3 </step>
+        <min>   1 </min>
+        <max>   3 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- digits -->  
+  <animation>
+    <type>textranslate</type>
+    <object-name>decimals-digit</object-name>
+    <property>instrumentation/ilec-sc7/lcd-digits-abs</property>
+    <factor> 1.000 </factor>
+    <step>   0.100 </step>
+    <bias>   0.005 </bias>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>units-digit</object-name>
+    <property>instrumentation/ilec-sc7/lcd-digits-abs</property>
+    <factor> 0.100 </factor>
+    <step>   1.000 </step>
+    <bias>   0.005 </bias>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>sign-digit</object-name>
+    <property>instrumentation/ilec-sc7/lcd-digits-sgn</property>
+    <factor> 0.100 </factor>
+    <step>   1.000 </step>
+    <bias>   0.005 </bias>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

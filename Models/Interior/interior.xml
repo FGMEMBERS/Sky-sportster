@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intcanopy</object-name>
+    <object-name>planchet</object-name>
+    <object-name>intporteA</object-name>
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Sky-sportster/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+  </effect>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>intvitres</object-name>
+  </effect>
+  
+  <!-- Pilot seat -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Seat/seat.xml</path>
+    <offsets>
+      <x-m> -2.35 </x-m>
+      <y-m> -0.23 </y-m>
+      <z-m> -0.36 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Passenger seat -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Seat/seat.xml</path>
+    <offsets>
+      <x-m> -2.35 </x-m>
+      <y-m>  0.23 </y-m>
+      <z-m> -0.36 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.71451 </x-m>
+      <y-m> -0.22000 </y-m>
+      <z-m> -0.25084 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord avant -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.89 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.07 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Yaw String -->
+  <model>
+    <name>yawstring</name>
+    <path>Aircraft/Sky-sportster//Models/Interior/Panel/Instruments/yawstring/yawstring.xml</path>
+    <offsets>
+      <x-m> -3.095 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.183 </z-m>
+      <pitch-deg> -13 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Animation des portes des trains -->
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteA</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> -105 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -105 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -2.88106 </x1-m>
+      <y1-m> -0.09461 </y1-m>
+      <z1-m> -0.59692 </z1-m>
+      <x2-m> -2.65595 </x2-m>
+      <y2-m> -0.09461 </y2-m>
+      <z2-m> -0.60731 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteG</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> -70 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -70 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -0.98807 </x1-m>
+      <y1-m> -0.45742 </y1-m>
+      <z1-m> -0.20316 </z1-m>
+      <x2-m> -0.65809 </x2-m>
+      <y2-m> -0.39712 </y2-m>
+      <z2-m> -0.21229 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteD</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 70 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 70 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -0.98807 </x1-m>
+      <y1-m>  0.45742 </y1-m>
+      <z1-m> -0.20316 </z1-m>
+      <x2-m> -0.65809 </x2-m>
+      <y2-m>  0.39712 </y2-m>
+      <z2-m> -0.21229 </z2-m>
+    </axis>
+  </animation>
+  
+  <!-- Canopy -->
+  <animation>
+    <name>IntTotaleCanope</name>
+    <object-name>intcanopy</object-name>
+    <object-name>intvitres</object-name>
+    <object-name>yawstring</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntTotaleCanope</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntTotaleCanope</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -45 </factor>
+    <center>
+      <x-m> -3.53571 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.04432 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

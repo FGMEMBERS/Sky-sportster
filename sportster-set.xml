@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="sportster-base.xml">
+
+  <sim>
+  
+    <description>Stemme Sky Sportster S6 (YASim)</description>
+    <author>BARANGER Emmanuel</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>beta production</status>
+    
+    <flight-model>yasim</flight-model>
+    <aero>sportster-yasim</aero>
+    
+    <rating>
+     <FDM type="int">     2 </FDM>
+     <systems type="int"> 2 </systems>
+     <cockpit type="int"> 2 </cockpit>
+     <model type="int">   4 </model>
+    </rating>
+    
+  </sim>
+
+</PropertyList>
