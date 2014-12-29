@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>yawstring.ac</path>
+
+  <animation>
+    <object-name>tape</object-name>
+    <object-name>string1</object-name>
+    <object-name>string2</object-name>
+    <object-name>string3</object-name>
+    <object-name>string4</object-name>
+    <object-name>string5</object-name>
+  </animation>
+
+  <animation>
+    <name>AllString0</name>
+    <object-name>string1</object-name>
+    <object-name>string2</object-name>
+    <object-name>string3</object-name>
+    <object-name>string4</object-name>
+    <object-name>string5</object-name>
+  </animation>
+
+  <animation>
+    <name>AllString1</name>
+    <object-name>string2</object-name>
+    <object-name>string3</object-name>
+    <object-name>string4</object-name>
+    <object-name>string5</object-name>
+  </animation>
+  
+  <animation>
+    <name>AllString2</name>
+    <object-name>string3</object-name>
+    <object-name>string4</object-name>
+    <object-name>string5</object-name>
+  </animation>
+  
+  <animation>
+    <name>AllString3</name>
+    <object-name>string4</object-name>
+    <object-name>string5</object-name>
+  </animation>
+  
+  <animation>
+    <name>AllString4</name>
+    <object-name>string5</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AllString0</object-name>
+    <property>instrumentation/yawstring</property>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AllString1</object-name>
+    <property>instrumentation/yawstring</property>
+    <center>
+      <x-m> 0.03594 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.00000 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AllString2</object-name>
+    <property>instrumentation/yawstring</property>
+    <center>
+      <x-m> 0.07193 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.00000 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AllString3</object-name>
+    <property>instrumentation/yawstring</property>
+    <center>
+      <x-m> 0.09887 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.00000 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AllString4</object-name>
+    <property>instrumentation/yawstring</property>
+    <center>
+      <x-m> 0.11871 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.00000 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>panel.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>panel2</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>panel</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/floods-lights</factor-prop>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.8 </blue>
+    </emission>
+  </animation>
+  
+  <!-- TRIM -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/trim/trim.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.337 </y-m>
+      <z-m>  0.008 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- COMPASS -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/MagneticCompass/MagneticCompass.xml</path>
+    <offsets>
+      <x-m> 0.030 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.158 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.293 </y-m>
+      <z-m>  0.012 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- PFD -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/pfd/pfd.xml</path>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m> -0.211 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- MFD -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/pfd/mfd.xml</path>
+    <offsets>
+      <x-m> -0.00140 </x-m>
+      <y-m>  0.00121 </y-m>
+      <z-m>  0.02969 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.289 </y-m>
+      <z-m> -0.055 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.206 </y-m>
+      <z-m> -0.049 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- GEARS -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/gears/gears.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.186 </y-m>
+      <z-m>  0.112 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.119 </y-m>
+      <z-m>  0.081 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VARIO -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/vario/ilec-sc7.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.119 </y-m>
+      <z-m>  0.016 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- AR-3102 -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/ar-3201/ar-3201.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.119 </y-m>
+      <z-m> -0.053 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/rpm/rpm.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.127 </y-m>
+      <z-m> 0.081 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- MAN -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/man/man.xml</path>
+    <offsets>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.127 </y-m>
+      <z-m>  0.014 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- MAGNETO -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/magneto/mags.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.057 </y-m>
+      <z-m> -0.119 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- SWITCH -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/other-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.279 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/alternator.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.261 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/instr-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.243 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/other-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.225 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/other-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.207 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.189 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/nav-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.171 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/battery.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.144 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/switch/other-lightsR.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.133 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+
+  <!-- EGT -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/egt/egt.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.181 </y-m>
+      <z-m> 0.059 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VOLT -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/volts/volts.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.222 </y-m>
+      <z-m> 0.059 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- OIL PRESSURE -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/oil-press/oil-press.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.181 </y-m>
+      <z-m> 0.018 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- OIL TEMPERATURE -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/oil-temp/oil-temp.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.222 </y-m>
+      <z-m> 0.018 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- AMPS -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/amps/amps.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.181 </y-m>
+      <z-m> -0.024 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- CHT -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/cht/cht.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.222 </y-m>
+      <z-m> -0.024 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FUEL -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.181 </y-m>
+      <z-m> -0.065 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FUEL TEMPERATURE -->
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/fuel-temp/fuel-temp.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.222 </y-m>
+      <z-m> -0.065 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- HOBBS -->  
+  <model>
+    <path>Aircraft/Sky-sportster/Models/Interior/Panel/Instruments/hobbs/hobbs.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.269 </y-m>
+      <z-m> 0.056 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>

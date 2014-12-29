@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>visses</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Sky-sportster/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry> <!--   0 km/h -->
+      <entry><ind>  32 </ind><dep>  68 </dep></entry> <!--  60 km/h -->
+      <entry><ind>  43 </ind><dep> 117 </dep></entry> <!--  80 km/h -->
+      <entry><ind>  54 </ind><dep> 174 </dep></entry> <!-- 100 km/h -->
+      <entry><ind>  65 </ind><dep> 233 </dep></entry> <!-- 120 km/h -->
+      <entry><ind>  76 </ind><dep> 286 </dep></entry> <!-- 140 km/h -->
+      <entry><ind>  86 </ind><dep> 335 </dep></entry> <!-- 160 km/h -->
+      <entry><ind>  97 </ind><dep> 382 </dep></entry> <!-- 180 km/h -->
+      <entry><ind> 108 </ind><dep> 425 </dep></entry> <!-- 200 km/h -->
+      <entry><ind> 135 </ind><dep> 500 </dep></entry> <!-- 250 km/h -->
+      <entry><ind> 150 </ind><dep> 575 </dep></entry> <!-- 300 km/h -->
+      <entry><ind> 210 </ind><dep> 652 </dep></entry> <!-- 400 km/h -->
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
